@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { FaLongArrowAltUp } from "react-icons/fa";
 function LandingPage() {
   return (
     <div className='w-full h-screen bg-zinc-900 pt-1'>
@@ -7,9 +7,12 @@ function LandingPage() {
         {["We Create", "Eye Opening", "Presentation"].map((item, index) => {
           return (
             <div key={index} className="masker">
+              <div className='w-fit flex '>
+                         {index===1 && (<div className='w-[9vw] h-[5vw] bg-red-500 relative top-[1vw] '></div>)}
               <h1 className='text-[7.5vw] leading-[6vw] tracking-tighter font-medium font-mono'>
                 {item}
               </h1>
+              </div>
             </div>
           );
         })}
@@ -20,6 +23,11 @@ function LandingPage() {
             {item}
           </p>
         ))}
+        <div className='px-5 py-2 border-[2px] font-light font-xs rounded-full uppercase border-zinc-500'>Start The Project</div>
+        <div className='w-8 h-8 border-[2px] flex items-center justify-center border-zinc-500 rounded-full'><span className='rotate-[45deg]'>
+          <FaLongArrowAltUp />
+          </span>
+          </div>
       </div>
     </div>
   );
